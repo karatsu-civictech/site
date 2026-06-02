@@ -12,7 +12,11 @@ export default {
     const url = new URL(request.url);
     for (const { prefix, origin } of ROUTES) {
       if (url.pathname === prefix || url.pathname.startsWith(prefix + '/')) {
-        const target = new URL(url.pathname + url.search, origin);
+        // 各アプリは base:'/<path>' でビルドされるが、Astro の出力は dist 直下に
+        // 置かれる（リンクだけが /<path>/... になる）。Pages はその dist をルートで
+        // 配信するため、origin へ渡す際は /<path> プレフィックスを除去する。
+        const rest = url.pathname.slice(prefix.length) || '/';
+        const target = new URL(rest + url.search, origin);
         return fetch(new Request(target, request));
       }
     }
