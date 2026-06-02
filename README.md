@@ -1,12 +1,15 @@
 # シビックテック唐津 公式サイト（ハブ）
 
 佐賀県唐津市のシビックテック団体「シビックテック唐津」の公式サイトです。
-このリポジトリは **ハブサイト**（`karatsu-civictech.org`）で、団体紹介と、
-各 Web アプリ（データツール）への入口の役割を持ちます。
+このリポジトリは **ハブサイト**で、団体紹介と、各 Web アプリ（データツール）への
+入口の役割を持ちます。
 
-- 本番ドメイン: https://karatsu-civictech.org
+🌐 **公開URL: https://karatsu-civictech.org/**
+
 - GitHub Organization: https://github.com/karatsu-civictech
-- 使用技術: [Astro](https://astro.build/)（静的サイト） / ホスティングは Vercel 想定
+- 使用技術: [Astro](https://astro.build/)（静的サイト）
+- ホスティング: [Cloudflare Pages](https://pages.cloudflare.com/)（独自ドメイン `karatsu-civictech.org` 割当・SSL有効）
+- デプロイ: `main` への push で GitHub Actions が自動ビルド & 公開（`.github/workflows/deploy.yml`）
 
 ## 全体アーキテクチャ（パス方式マルチゾーン）
 
