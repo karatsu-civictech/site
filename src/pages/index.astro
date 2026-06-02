@@ -156,12 +156,12 @@ const sortedApps = [...apps].sort((a, b) => order[a.status] - order[b.status]);
         >
           GitHub を見る
         </a>
-        <a class="btn btn-ghost" href="mailto:info@karatsu-civictech.org">
-          メールで問い合わせる
-        </a>
       </div>
+      <p class="contact-mail">
+        メール：<a href="mailto:ps0139hk@gmail.com">ps0139hk@gmail.com</a>
+      </p>
       <p class="cta-note">
-        ※ お問い合わせ先は仮です。SNS・フォーム等の窓口は準備中です。
+        ※ SNS・お問い合わせフォーム等の窓口は準備中です。
       </p>
     </div>
   </section>
@@ -418,8 +418,15 @@ const sortedApps = [...apps].sort((a, b) => order[a.status] - order[b.status]);
       gap: 0.75rem;
       flex-wrap: wrap;
     }
+    .contact-mail {
+      margin-top: 1.25rem;
+      font-weight: 600;
+    }
+    .contact-mail a {
+      color: var(--brand-dark);
+    }
     .cta-note {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       font-size: 0.85rem;
       color: var(--ink-soft);
     }
