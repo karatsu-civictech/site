@@ -32,11 +32,11 @@ export const STATUS_LABEL: Record<AppStatus, string> = {
 export const apps: CivicApp[] = [
   {
     path: 'gikai',
-    title: '市議会 発言マインドマップ',
+    title: '唐津の議員見える化プロジェクト',
     description:
-      '唐津市議会の会議録を読み込み、議員ごと・話題ごとの発言をマインドマップで可視化します。「誰が・何について・どう発言したか」を直感的にたどれる仕組み。',
-    status: 'planned',
-    repo: 'gikai-mindmap',
+      '唐津市議会の会議録から、議員ごとの発言をワードクラウドで可視化。各議員が議会で「どんなテーマを多く語っているか」が一目で分かります。',
+    status: 'live',
+    repo: 'gikai',
     icon: '🗳️',
   },
   {
