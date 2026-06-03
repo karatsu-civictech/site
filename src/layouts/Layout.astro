@@ -26,6 +26,15 @@ const fullTitle =
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ja_JP" />
+
+    <!-- Google Analytics 4 -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-RM5801F92B"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-RM5801F92B');
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -61,7 +70,10 @@ const fullTitle =
           </a>
           <a href="/#join">お問い合わせ</a>
         </nav>
-        <p class="copyright">© {new Date().getFullYear()} シビックテック唐津</p>
+        <p class="copyright">
+          © {new Date().getFullYear()} シビックテック唐津
+          <span class="privacy-note">／ サイト改善のためアクセス解析（Google Analytics）を使用しています。</span>
+        </p>
       </div>
     </footer>
 
