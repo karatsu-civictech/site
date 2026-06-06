@@ -40,12 +40,12 @@ export const apps: CivicApp[] = [
     icon: '🗳️',
   },
   {
-    path: 'bousai',
-    title: '防災マップ（仮）',
+    path: 'keizai',
+    title: '唐津市 経済動向ダッシュボード',
     description:
-      'ハザード情報や避難所などのオープンデータを地図上に重ねて、地域の防災を「自分ごと」にするためのマップアプリ。',
-    status: 'planned',
-    repo: 'bousai-map',
-    icon: '🗺️',
+      '唐津市の月次経済動向データ（2010年〜・観光/雇用/一次産業など）を、BIツールのようにフィルター・ソート・グラフで自由に閲覧。コロナ前後の変化や指標どうしの比較も直感的に読み取れます。',
+    status: 'live',
+    repo: 'karatsu-economy-dashboard',
+    icon: '📈',
   },
 ];
