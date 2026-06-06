@@ -48,4 +48,13 @@ export const apps: CivicApp[] = [
     repo: 'karatsu-economy-dashboard',
     icon: '📈',
   },
+  {
+    path: 'people-flow',
+    title: '唐津市 エリア別人流マップ',
+    description:
+      '唐津市のエリア別人流（滞在人口）データを国土地理院マップ上に可視化。月次の推移を地図で再生でき、エリアごとに時間帯・平日休日・年代別のプロファイルまで掘り下げて見られます。',
+    status: 'live',
+    repo: 'karatsu-people-flow',
+    icon: '🗺️',
+  },
 ];
