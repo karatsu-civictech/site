@@ -5,6 +5,7 @@
 const ROUTES = [
   { prefix: '/gikai', origin: 'https://karatsu-gikai.pages.dev' },
   { prefix: '/keizai', origin: 'https://karatsu-economy-dashboard.pages.dev' },
+  { prefix: '/people-flow', origin: 'https://karatsu-people-flow.pages.dev' },
   // 例: { prefix: '/bousai', origin: 'https://karatsu-bousai.pages.dev' },
 ];
 

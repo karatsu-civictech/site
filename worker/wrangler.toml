@@ -10,4 +10,6 @@ routes = [
   { pattern = "karatsu-civictech.org/gikai/*", zone_name = "karatsu-civictech.org" },
   { pattern = "karatsu-civictech.org/keizai", zone_name = "karatsu-civictech.org" },
   { pattern = "karatsu-civictech.org/keizai/*", zone_name = "karatsu-civictech.org" },
+  { pattern = "karatsu-civictech.org/people-flow", zone_name = "karatsu-civictech.org" },
+  { pattern = "karatsu-civictech.org/people-flow/*", zone_name = "karatsu-civictech.org" },
 ]
