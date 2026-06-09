@@ -2,7 +2,7 @@
 //
 // 新しいアプリを追加するときは、この配列に 1 件足すだけ。
 //   1. ここに { path, title, ... } を追記
-//   2. アプリ本体は別リポジトリ（karatsu-civictech/<repo>）で開発
+//   2. アプリ本体は別リポジトリ（civictech-karatsu/<repo>）で開発
 //   3. vercel.json の rewrites に /<path> の転送先を 1 行足す
 // これでトップの「アプリ一覧」に自動で並びます。
 
@@ -17,7 +17,7 @@ export interface CivicApp {
   description: string;
   /** 公開状況 */
   status: AppStatus;
-  /** GitHub リポジトリ名（karatsu-civictech/<repo>）。未作成なら省略可 */
+  /** GitHub リポジトリ名（civictech-karatsu/<repo>）。未作成なら省略可 */
   repo?: string;
   /** カードに添えるアイコン（絵文字でOK） */
   icon?: string;

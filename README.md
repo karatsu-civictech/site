@@ -6,7 +6,7 @@
 
 🌐 **公開URL: https://civictech-karatsu.org/**
 
-- GitHub Organization: https://github.com/karatsu-civictech
+- GitHub Organization: https://github.com/civictech-karatsu
 - 使用技術: [Astro](https://astro.build/)（静的サイト）
 - ホスティング: [Cloudflare Pages](https://pages.cloudflare.com/)（独自ドメイン `civictech-karatsu.org` 割当・SSL有効）
 - デプロイ: `main` への push で GitHub Actions が自動ビルド & 公開（`.github/workflows/deploy.yml`）
@@ -39,7 +39,7 @@ civictech-karatsu.org            ← このリポジトリ（ハブ / site）
      icon: '🗳️',
    }
    ```
-2. **アプリ本体を作る**: `karatsu-civictech/<repo>` を新規作成して開発。
+2. **アプリ本体を作る**: `civictech-karatsu/<repo>` を新規作成して開発。
    そのアプリの base path を `/<path>`（例 `/gikai`）に設定する。
    - Astro: `astro.config.mjs` に `base: '/gikai'`
    - Next.js: `next.config.js` に `basePath: '/gikai'`
