@@ -4,11 +4,11 @@
 このリポジトリは **ハブサイト**で、団体紹介と、各 Web アプリ（データツール）への
 入口の役割を持ちます。
 
-🌐 **公開URL: https://karatsu-civictech.org/**
+🌐 **公開URL: https://civictech-karatsu.org/**
 
 - GitHub Organization: https://github.com/karatsu-civictech
 - 使用技術: [Astro](https://astro.build/)（静的サイト）
-- ホスティング: [Cloudflare Pages](https://pages.cloudflare.com/)（独自ドメイン `karatsu-civictech.org` 割当・SSL有効）
+- ホスティング: [Cloudflare Pages](https://pages.cloudflare.com/)（独自ドメイン `civictech-karatsu.org` 割当・SSL有効）
 - デプロイ: `main` への push で GitHub Actions が自動ビルド & 公開（`.github/workflows/deploy.yml`）
 
 ## 全体アーキテクチャ（パス方式マルチゾーン）
@@ -17,21 +17,21 @@
 パスごとに転送します。利用者からは 1 つのドメインに見えます。
 
 ```
-karatsu-civictech.org            ← このリポジトリ（ハブ / site）
+civictech-karatsu.org            ← このリポジトリ（ハブ / site）
         │  vercel.json の rewrites で転送
         ├─ /gikai/*   → gikai-mindmap  プロジェクト（別リポジトリ）
         └─ /bousai/*  → bousai-map     プロジェクト（別リポジトリ）
 ```
 
 - アプリごとにリポジトリ・フレームワーク・デプロイが独立（別の人が別のアプリを作れる）
-- URL は `karatsu-civictech.org/<path>` に統一
+- URL は `civictech-karatsu.org/<path>` に統一
 
 ## 新しいアプリを追加する手順
 
 1. **トップに載せる**: `src/data/apps.ts` の `apps` 配列に 1 件追記する。
    ```ts
    {
-     path: 'gikai',              // karatsu-civictech.org/gikai
+     path: 'gikai',              // civictech-karatsu.org/gikai
      title: '市議会 発言マインドマップ',
      description: '…',
      status: 'live',             // 'live' | 'wip' | 'planned'

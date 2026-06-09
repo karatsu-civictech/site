@@ -9,7 +9,7 @@
 export type AppStatus = 'live' | 'wip' | 'planned';
 
 export interface CivicApp {
-  /** アクセスパス（先頭スラッシュなし）。例: 'gikai' → karatsu-civictech.org/gikai */
+  /** アクセスパス（先頭スラッシュなし）。例: 'gikai' → civictech-karatsu.org/gikai */
   path: string;
   /** 表示名 */
   title: string;

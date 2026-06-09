@@ -1,5 +1,5 @@
 // パス方式マルチゾーンのルーター Worker。
-// karatsu-civictech.org/<path> を各アプリ（別 Cloudflare Pages）へ転送する。
+// civictech-karatsu.org/<path> を各アプリ（別 Cloudflare Pages）へ転送する。
 // 各アプリは base:'/<path>' でビルドされているので、同じパスのまま origin に渡す。
 
 const ROUTES = [
