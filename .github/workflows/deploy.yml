@@ -38,4 +38,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 1e81d357529beeb0c411a21850858549
-          command: pages deploy dist --project-name=karatsu-civictech --branch=main
+          command: pages deploy dist --project-name=civictech-karatsu --branch=main
