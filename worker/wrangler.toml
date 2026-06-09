@@ -1,7 +1,7 @@
 # ハブ civictech-karatsu.org のパス振り分け Worker。
 # /gikai* を gikai アプリ（別 Pages プロジェクト）へ転送する。
 # 新しいアプリを増やすときは src/index.js の ROUTES と routes を追記する。
-name = "karatsu-civictech-router"
+name = "civictech-karatsu-router"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
 
