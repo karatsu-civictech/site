@@ -1,0 +1,9 @@
+# 旧ドメイン karatsu-civictech.org → 新ドメイン civictech-karatsu.org の 301 リダイレクト Worker。
+# 旧ドメインの登録を手放したらこの Worker ごと削除してよい。
+name = "karatsu-civictech-redirect"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+routes = [
+  { pattern = "karatsu-civictech.org/*", zone_name = "karatsu-civictech.org" },
+]
