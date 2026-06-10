@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch: # 手動実行も可能
+  schedule:
+    # 毎日 6:00 JST に再ビルドして note の新着記事をトップに反映する
+    - cron: '0 21 * * *'
 
 jobs:
   deploy:

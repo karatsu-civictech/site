@@ -1,10 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { apps, STATUS_LABEL } from '../data/apps.ts';
+import { fetchNoteArticles, NOTE_URL } from '../data/notes.ts';
 
 // 公開状況で並べ替え（公開中 → 開発中 → 構想中）
 const order = { live: 0, wip: 1, planned: 2 } as const;
 const sortedApps = [...apps].sort((a, b) => order[a.status] - order[b.status]);
+
+// note の最新記事（ビルド時に取得。失敗時は空配列）
+const noteArticles = await fetchNoteArticles(3);
 ---
 
 <Layout>
@@ -116,6 +120,39 @@ const sortedApps = [...apps].sort((a, b) => order[a.status] - order[b.status]);
     </div>
   </section>
 
+  <!-- Blog (note) -->
+  <section id="blog" class="section">
+    <div class="container">
+      <h2>ブログ・お知らせ</h2>
+      <p class="section-lead">
+        活動の様子や記事は
+        <a href={NOTE_URL} target="_blank" rel="noopener">note</a>
+        で発信しています。
+      </p>
+      {
+        noteArticles.length > 0 && (
+          <ul class="note-list">
+            {noteArticles.map((article) => (
+              <li>
+                <a class="note-item" href={article.url} target="_blank" rel="noopener">
+                  <time datetime={article.dateISO}>{article.dateLabel}</time>
+                  <h3>{article.title}</h3>
+                  <p>{article.excerpt}</p>
+                  <span class="note-read">note で読む →</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      <p class="note-more">
+        <a class="btn btn-note" href={NOTE_URL} target="_blank" rel="noopener">
+          記事一覧を note で見る
+        </a>
+      </p>
+    </div>
+  </section>
+
   <!-- Activity -->
   <section id="activity" class="section">
     <div class="container">
@@ -155,12 +192,20 @@ const sortedApps = [...apps].sort((a, b) => order[a.status] - order[b.status]);
         >
           GitHub を見る
         </a>
+        <a
+          class="btn btn-note"
+          href={NOTE_URL}
+          target="_blank"
+          rel="noopener"
+        >
+          note を読む
+        </a>
       </div>
       <p class="contact-mail">
         メール：<a href="mailto:ps0139hk@gmail.com">ps0139hk@gmail.com</a>
       </p>
       <p class="cta-note">
-        ※ SNS・お問い合わせフォーム等の窓口は準備中です。
+        ※ お問い合わせフォームは準備中です。
       </p>
     </div>
   </section>
@@ -365,6 +410,60 @@ const sortedApps = [...apps].sort((a, b) => order[a.status] - order[b.status]);
     .apps-note {
       margin-top: 2rem;
       color: var(--ink-soft);
+    }
+
+    /* Blog (note) */
+    .note-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .note-item {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+    .note-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(20, 50, 63, 0.08);
+    }
+    .note-item time {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+    }
+    .note-item h3 {
+      margin: 0.4rem 0 0.5rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    .note-item p {
+      margin: 0 0 1rem;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      flex-grow: 1;
+    }
+    .note-read {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--brand-dark);
+    }
+    .note-more {
+      margin: 0;
+    }
+    .btn-note {
+      background: #2cb696; /* note ブランドのグリーン系 */
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(44, 182, 150, 0.3);
     }
 
     /* Steps */
