@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
   <title id="title">ロゴ案H13 円相と天守と波(黄金比レイアウト)</title>
   <!-- 円相(欠けた円)。切れ目は右上 -->
-  <path d="M 310 60 A 206 206 0 1 0 416 130" fill="none" stroke="#0f7b8a" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 310 60 A 206 206 0 1 0 416 130" fill="none" stroke="#9fe0e8" stroke-width="24" stroke-linecap="round"/>
   <!-- 朝日(円相の切れ目に置く) -->
   <circle cx="368" cy="86" r="30" fill="#f7c948"/>
 
@@ -9,7 +9,7 @@
     唐津城・天守(軒反り+白壁)
     コンテンツ全体(y=110〜384)を黄金比で分割した y≈279 に石垣の下端(=天守と海の境界)を置く
   -->
-  <g fill="#0f7b8a">
+  <g fill="#9fe0e8">
     <!-- 最上層の屋根 -->
     <path d="M206 150 Q 234 145 256 110 Q 278 145 306 150 Z"/>
     <!-- 最上層の壁 -->
@@ -25,7 +25,7 @@
   </g>
 
   <!-- 波(振幅を抑えて軽く。下端と円相の間に余白を残す) -->
-  <g fill="none" stroke="#0f7b8a" stroke-linecap="round">
+  <g fill="none" stroke="#9fe0e8" stroke-linecap="round">
     <path d="M132 318c42-24 82-24 124 0s82 24 124 0" stroke-width="19"/>
     <path d="M150 364c30-18 60-18 90 0s60 18 90 0" stroke-width="13" opacity=".5"/>
   </g>
